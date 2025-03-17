@@ -10,6 +10,8 @@ import getInitialsNameWord from "@/utils/getInitialsNameWord";
 import NoteCard from "@/components/Note/NoteCard";
 import { socket } from "@/lib/socketClient";
 import { Skeleton } from "antd";
+import img from "../../../public/planet.png";
+import Image from "next/image";
 
 const Page = () => {
   const [content, setContent] = useState(null);
@@ -124,11 +126,28 @@ const Page = () => {
           <Nav />
         </div>
         <div className="flex-1/2 overflow-y-auto relative">
+          {!isLoading && notes?.length === 0 && (
+            <Image
+              className="max-w-[500px] mx-auto p-4 mt-5 w-full"
+              src={img}
+              alt="notes"
+            />
+          )}
+
           <div className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {notes.map((note) => (
               <NoteCard note={note} key={note?._id} />
             ))}
-            {isLoading && (new Array(6).fill(0).map((_, i) => <Skeleton.Node key={i} active={true} style={{ width: "100%" }} />))}
+            {isLoading &&
+              new Array(6)
+                .fill(0)
+                .map((_, i) => (
+                  <Skeleton.Node
+                    key={i}
+                    active={true}
+                    style={{ width: "100%" }}
+                  />
+                ))}
           </div>
 
           <div
