@@ -1,12 +1,12 @@
 # Real-Time Collaborative Notes App
 
 ## ✅ Objective
-Build a Real-Time Collaborative Notes Application where multiple users can create, edit, and view notes in real-time with JWT-based authentication and Socket.IO for live updates, using Next.js 14, Redux Toolkit, Socket.IO, Express.js, MongoDB, Tailwind CSS, and Ant Design.
+Build a Real-Time Collaborative Notes Application where multiple users can create, edit, and view notes in real-time with JWT-based authentication and Socket.IO for live updates, using Next.js 15, Redux Toolkit, Socket.IO, Express.js, MongoDB, Tailwind CSS, and Ant Design.
 
 ## 🛠️ Tech Stack
 | Technology         | Purpose                     |
 |----------------|------------------------------------|
-| Next.js 14          | Fullstack framework |
+| Next.js 15          | Fullstack framework |
 | Redux Toolkit    | State management |
 | Socket.IO         | Real-time communication |
 | Express.js          | Backend API |
